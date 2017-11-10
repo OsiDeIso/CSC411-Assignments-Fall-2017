@@ -1,18 +1,11 @@
-\BOOKMARK [1][-]{section*.2}{\(Part 1\) Learning Basics of Regression in Python}{}% 1
-\BOOKMARK [2][-]{section*.3}{Describe and Summarize the data}{section*.2}% 2
-\BOOKMARK [2][-]{section*.4}{Visualization}{section*.2}% 3
-\BOOKMARK [2][-]{section*.5}{Feature Weights}{section*.2}% 4
-\BOOKMARK [2][-]{section*.6}{Mean Squared Error Value}{section*.2}% 5
-\BOOKMARK [2][-]{section*.7}{Two Other Loss Functions}{section*.2}% 6
-\BOOKMARK [2][-]{section*.8}{Most Significant Features}{section*.2}% 7
-\BOOKMARK [1][-]{section*.9}{\(Part 2\) Locally Reweighted Regression}{}% 8
-\BOOKMARK [2][-]{section*.10}{\(1\) Solution to the Weighted Least Square Problem}{section*.9}% 9
-\BOOKMARK [2][-]{section*.11}{\(3\) k-fold Cross Validation Plots}{section*.9}% 10
-\BOOKMARK [2][-]{section*.12}{\(4\) Algorithm Behaviour for 0 and }{section*.9}% 11
-\BOOKMARK [1][-]{section*.13}{\(Part 3\) Mini-batch SGD Gradient Estimator}{}% 12
-\BOOKMARK [2][-]{section*.14}{\(1\) Mini-Batch Proof}{section*.13}% 13
-\BOOKMARK [2][-]{section*.15}{\(2\) Show EI[LI\(x,y,\)] = L\(x,y,\)}{section*.13}% 14
-\BOOKMARK [2][-]{section*.16}{\(3\) Importance of the Previous Result}{section*.13}% 15
-\BOOKMARK [2][-]{section*.17}{\(4a\) L for Cost Function}{section*.13}% 16
-\BOOKMARK [2][-]{section*.18}{\(5\) True Gradient \(L\)vs. Batch Gradient Comparisons}{section*.13}% 17
-\BOOKMARK [2][-]{section*.19}{\(6\) Plot log ̃j against logm}{section*.13}% 18
+\BOOKMARK [1][-]{section*.2}{1 - Class Conditional Gaussians}{}% 1
+\BOOKMARK [2][-]{section*.3}{1 - Using Bayes’ rule to derive an expression for p\(y = kx, ,\)}{section*.2}% 2
+\BOOKMARK [2][-]{section*.4}{2 - Expression for the negative likelihood function \(NLL\)}{section*.2}% 3
+\BOOKMARK [2][-]{section*.5}{3 - Partial Derivatives of the Likelihood}{section*.2}% 4
+\BOOKMARK [2][-]{section*.6}{4 - Find the maximum likelihood estimates for \040and }{section*.2}% 5
+\BOOKMARK [1][-]{section*.7}{2 - Handwritten Digit Classification}{}% 6
+\BOOKMARK [2][-]{section*.8}{0 - Loading the data and Plotting the Feature Means}{section*.7}% 7
+\BOOKMARK [2][-]{section*.9}{1 - K-NN Classifier}{section*.7}% 8
+\BOOKMARK [2][-]{section*.10}{2 - Conditional Gaussian Classifier Training}{section*.7}% 9
+\BOOKMARK [2][-]{section*.11}{3 - Naive Bayes Classifier Training}{section*.7}% 10
+\BOOKMARK [2][-]{section*.12}{4 - Model Comparison}{section*.7}% 11

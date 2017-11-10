@@ -17,12 +17,6 @@
 \hypersetup{colorlinks=true,allcolors=blue}
 \usepackage{hypcap}
 \usepackage{graphicx}    %for figure environment.
-
-%\usepackage[subpreambles=true]{standalone}
-%\usepackage{fullpage}
-%\usepackage[framemethod=tikz]{mdframed}
-%\usepackage{pdfpages}
-
 \usepackage{calc}
 \usepackage{ifthen}
 \usepackage{tikz}
@@ -32,10 +26,8 @@
 \usepackage{enumitem}
 \setlist[enumerate]{itemsep=0mm}
 \setlist[itemize]{itemsep=0mm}
-
 \usepackage{pstricks-add}
 \usepackage{pstricks}
-
 \usepackage{rotating}
 \usepackage{mathtools}
 
@@ -106,9 +98,8 @@
 %   - Author
 %
 
-\newcommand{\hmwkTitle}{Assignment 1\ \ }
-\newcommand{\hmwkDueDate}{Thursday, October 5\ts{th}, 2017}
-\newcommand{\hmwkSubmissionDate}{Thursday, October 5\ts{th}, 2017}
+\newcommand{\hmwkTitle}{Assignment 2\ \ }
+\newcommand{\hmwkDueDate}{Sunday, November 12\ts{th}, 2017}
 \newcommand{\hmwkClass}{CSC411}
 \newcommand{\hmwkClassTime}{Section A}
 \newcommand{\hmwkClassInstructor}{Steven Chuang}
@@ -175,6 +166,38 @@
 \clearpage
 \setcounter{page}{1}
 
+\section{1 - Class Conditional Gaussians}
+\subsection{1 - Using Bayes’ rule to derive an expression for $p(y = kx, \mu,\sigma)$}
+\subsection{2 - Expression for the negative likelihood function (NLL)}
+\subsection{3 - Partial Derivatives of the Likelihood}
+\subsection{4 - Find the maximum likelihood estimates for $\mu$ and $\sigma$}
+
+
+\section{2 - Handwritten Digit Classification}
+\subsection{0 - Loading the data and Plotting the Feature Means}
+
+The means (from 700 samples per digit) for each feature (64 features in total for an 8-by-8 pixel image) for 10 digits (digit 0 to digit 9) are plotted below: 
+
+\begin{center}
+\includegraphics[scale=1]{averages.png}
+\end{center}
+
+
+\subsection{1 -  K-NN Classifier}
+\subsection{2 -  Conditional Gaussian Classifier Training}
+\subsection{3 -   Naive Bayes Classifier Training}
+\subsection{4 -  Model Comparison}
+
+
+\pagebreak
+
+
+\end{document}
+
+
+$
+0.999999942522
+\iffalse
 \section{(Part 1) Learning Basics of Regression in Python}
 
 \subsection{Describe and Summarize the data}
@@ -201,7 +224,7 @@
   \item Target name is MEDV, the median value of a house and it consists of real numbers (range: 5.0 - 50.0)
 \end{itemize}
 
-\pagebreak
+
 \subsection{Visualization}
 This is a plot of every feature against the target where the feature and targets are on the x and y-axes of the Cartesian plane respectively. 
 
@@ -786,11 +809,4 @@ The weights obtained from the true gradient, $\nabla L$ have been compared with 
 The single parameter chosen,  $w_{j}$ was the RM (average number of rooms per dwelling) for $j=5$ and the graph was plotted for $m$ in the range of [0,400] and $K = 500$: 
 
 \includegraphics[scale=1]{plot1.png}
-
-
-
-\end{document}
-
-
-$
-0.999999942522
+\fi
