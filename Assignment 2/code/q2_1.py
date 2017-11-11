@@ -86,6 +86,7 @@ class KNearestNeighbor(object):
 
         # If there happens to be a a tie
         if number_of_maximum_frequency_occurences != 1:
+
             # Perform the analysis again for the last neighbor removed
             return self.digit_decider(k_nearest_digits[:k-1],k-1)
 
@@ -107,7 +108,7 @@ def cross_validation(train_data, train_labels, k_range=np.arange(1,16)):
         # Loop over folds
 
         # Make a fold using sklearn's KFold function call
-        kf = KFold(n_splits=K_FOLD_RANGE, shuffle=False)
+        kf = KFold(n_splits=K_FOLD_RANGE, shuffle=True)
 
         # Obtain the accuracies for K_FOLD_RANGE folds for a given k-value in KNN
         mean_accuracy_for_folds_in_kNN = []
@@ -126,10 +127,10 @@ def cross_validation(train_data, train_labels, k_range=np.arange(1,16)):
             validation_labels_fold = train_labels[validation_set_indices]
 
             # Make a KNN with the given train_set_indices
-            knn = KNearestNeighbor(train_data_fold, train_labels_fold)
+            knn = KNearestNeighbor( train_data_fold, train_labels_fold)
 
             # Run the classification scheme to output results
-            mean_accuracy_for_folds_in_kNN.append(classification_accuracy(knn, k, validation_data_fold, validation_labels_fold))
+            mean_accuracy_for_folds_in_kNN.append(classification_accuracy(knn, k, train_data_fold, train_labels_fold))
 
         # Obtain the mean of the fold values
         mean_accuracy_for_KNN.append(np.mean(mean_accuracy_for_folds_in_kNN))
@@ -160,7 +161,7 @@ def classification_accuracy(knn, k, eval_data, eval_labels):
         number_of_evaluated_samples +=1
 
     accuracy = (number_of_correctly_evaluated_samples/number_of_evaluated_samples)
-    print('k = ', k, 'accuracy = ', accuracy)
+    # print('k = ', k, 'accuracy = ', accuracy)
     return accuracy
 
 def main():
