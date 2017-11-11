@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 
 IMAGE_SIZE = 8
 
+
 def plot_means(train_data, train_labels):
     means = []
     for i in range(0, 10):

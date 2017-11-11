@@ -18,6 +18,9 @@ def compute_mean_mles(train_data, train_labels):
     '''
     means = np.zeros((10, 64))
     # Compute means
+
+
+
     return means
 
 def compute_sigma_mles(train_data, train_labels):

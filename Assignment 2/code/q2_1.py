@@ -6,8 +6,12 @@ Here you should implement and evaluate the k-NN classifier.
 
 import data
 import numpy as np
+from sklearn.model_selection import KFold
 # Import pyplot - plt.imshow is useful!
 import matplotlib.pyplot as plt
+
+K_FOLD_RANGE = 10
+np.set_printoptions(threshold=np.inf)
 
 class KNearestNeighbor(object):
     '''
@@ -66,6 +70,9 @@ class KNearestNeighbor(object):
 
         return digit
 
+    # Function takes a list of neighbors (digits) with the number of neighbors and decides which digit
+    # to return. If there is a tie, it reduces the number of neighbors and repeats process until a decision
+    # can be made.
     def digit_decider(self, k_nearest_digits, k):
 
         # Obtain the unique neighbors list and their frequency (counts) -- sorted
@@ -95,11 +102,41 @@ def cross_validation(train_data, train_labels, k_range=np.arange(1,16)):
     The intention was for students to take the training data from the knn object - this should be clearer
     from the new function signature.
     '''
+    mean_accuracy_for_KNN = []
     for k in k_range:
         # Loop over folds
-        # Evaluate k-NN
-        # ...
-        pass
+
+        # Make a fold using sklearn's KFold function call
+        kf = KFold(n_splits=K_FOLD_RANGE, shuffle=False)
+
+        # Obtain the accuracies for K_FOLD_RANGE folds for a given k-value in KNN
+        mean_accuracy_for_folds_in_kNN = []
+
+        # Split the data into the train set and the validation set for each fold in K_FOLD_RANGE
+        for train_set_indices, validation_set_indices in kf.split(train_data):
+            # print(train_set_indices.shape)
+            # print(validation_set_indices.shape)
+
+            # The training set data and labels for a given folds (K_FOLD_RANGE - 1)
+            train_data_fold = train_data[train_set_indices]
+            train_labels_fold = train_labels[train_set_indices]
+
+            # The validation set data labels for a given fold (1)
+            validation_data_fold = train_data[validation_set_indices]
+            validation_labels_fold = train_labels[validation_set_indices]
+
+            # Make a KNN with the given train_set_indices
+            knn = KNearestNeighbor(train_data_fold, train_labels_fold)
+
+            # Run the classification scheme to output results
+            mean_accuracy_for_folds_in_kNN.append(classification_accuracy(knn, k, validation_data_fold, validation_labels_fold))
+
+        # Obtain the mean of the fold values
+        mean_accuracy_for_KNN.append(np.mean(mean_accuracy_for_folds_in_kNN))
+
+    print('Mean', mean_accuracy_for_KNN)
+
+    pass
 
 def classification_accuracy(knn, k, eval_data, eval_labels):
     '''
@@ -122,14 +159,17 @@ def classification_accuracy(knn, k, eval_data, eval_labels):
         # Increase the evaulated samples count
         number_of_evaluated_samples +=1
 
-    return (number_of_correctly_evaluated_samples/number_of_evaluated_samples)
+    accuracy = (number_of_correctly_evaluated_samples/number_of_evaluated_samples)
+    print('k = ', k, 'accuracy = ', accuracy)
+    return accuracy
 
 def main():
     train_data, train_labels, test_data, test_labels = data.load_all_data('data')
-    knn = KNearestNeighbor(train_data, train_labels)
 
-    a = classification_accuracy(knn, 15, test_data, test_labels)
-    print(a)
+    print('training')
+    cross_validation(train_data,train_labels)
+    print('test')
+    cross_validation(test_data, test_labels)
 
 
 if __name__ == '__main__':
