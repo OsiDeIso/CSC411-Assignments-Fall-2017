@@ -17,9 +17,16 @@ def compute_mean_mles(train_data, train_labels):
     The ith row will correspond to the mean estimate for digit class i
     '''
     means = np.zeros((10, 64))
-    # Compute means
 
+    # Compute means for every feature (64) for all samples
+    # for a given digit
+    for i in range(len(means)):
 
+        # Get the indicies for every digit i
+        digit_indicies = np.where(train_labels == i)
+        # Find the mean of the each feature (downwards -> axis = 0)
+        # where the sample data has an output of digit i
+        means[i] = np.mean(train_data[digit_indicies], axis=0)
 
     return means
 
@@ -32,6 +39,10 @@ def compute_sigma_mles(train_data, train_labels):
     '''
     covariances = np.zeros((10, 64, 64))
     # Compute covariances
+
+    print(len(covariances))
+    print(covariances.shape)
+
     return covariances
 
 def plot_cov_diagonal(covariances):
