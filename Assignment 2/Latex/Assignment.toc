@@ -1,20 +1,16 @@
 \contentsline {section}{1 - Class Conditional Gaussians}{1}{section*.2}
-\contentsline {subsection}{1 - Using Bayes’ rule to derive an expression for $p(y = kx, \mu ,\sigma )$}{1}{section*.3}
-\contentsline {subsection}{2 - Expression for the negative likelihood function (NLL)}{1}{section*.4}
-\contentsline {subsection}{3 - Partial Derivatives of the Likelihood}{1}{section*.5}
-\contentsline {subsection}{4 - Find the maximum likelihood estimates for $\mu $ and $\sigma $}{1}{section*.6}
-\contentsline {section}{2 - Handwritten Digit Classification}{1}{section*.7}
-\contentsline {subsection}{0 - Loading the data and Plotting the Feature Means}{1}{section*.8}
-\contentsline {subsection}{1 - K-NN Classifier}{1}{section*.9}
-\contentsline {subsubsection}{Train and Test Classification Accuracy for K=1 and K=15}{1}{section*.10}
-\contentsline {subsubsection}{Tie Breaker Method}{1}{section*.11}
-\contentsline {subsection}{2 - Conditional Gaussian Classifier Training}{2}{section*.12}
-\contentsline {subsubsection}{Plot of the Diagonal Elements of the Covariance Matrix}{2}{section*.13}
-\contentsline {subsubsection}{Average Conditional (Log) Likelihoods}{2}{section*.14}
-\contentsline {subsubsection}{Accuracy for the Most Likely Posterior Class}{2}{section*.15}
-\contentsline {subsection}{3 - Naive Bayes Classifier Training}{3}{section*.16}
-\contentsline {subsubsection}{Plot of Eta}{3}{section*.17}
-\contentsline {subsubsection}{Plot of Generated Binarized Data (Using a Binomial Disribution)}{3}{section*.18}
-\contentsline {subsubsection}{Average Conditional (Log) Likelihoods}{3}{section*.19}
-\contentsline {subsubsection}{Accuracy for the Most Likely Posterior Class}{3}{section*.20}
-\contentsline {subsection}{4 - Model Comparison}{3}{section*.21}
+\contentsline {section}{2 - Handwritten Digit Classification}{11}{section*.3}
+\contentsline {subsection}{0 - Loading the data and Plotting the Feature Means}{11}{section*.4}
+\contentsline {subsection}{1 - K-NN Classifier}{11}{section*.5}
+\contentsline {subsubsection}{Train and Test Classification Accuracy for K=1 and K=15}{11}{section*.6}
+\contentsline {subsubsection}{Tie Breaker Method}{11}{section*.7}
+\contentsline {subsection}{2 - Conditional Gaussian Classifier Training}{12}{section*.8}
+\contentsline {subsubsection}{Plot of the Diagonal Elements of the Covariance Matrix}{12}{section*.9}
+\contentsline {subsubsection}{Average Conditional (Log) Likelihoods}{12}{section*.10}
+\contentsline {subsubsection}{Accuracy for the Most Likely Posterior Class}{12}{section*.11}
+\contentsline {subsection}{3 - Naive Bayes Classifier Training}{12}{section*.12}
+\contentsline {subsubsection}{Plot of Eta}{12}{section*.13}
+\contentsline {subsubsection}{Plot of Generated Binarized Data (Using a Binomial Disribution)}{12}{section*.14}
+\contentsline {subsubsection}{Average Conditional (Log) Likelihoods}{13}{section*.15}
+\contentsline {subsubsection}{Accuracy for the Most Likely Posterior Class}{13}{section*.16}
+\contentsline {subsection}{4 - Model Comparison}{13}{section*.17}

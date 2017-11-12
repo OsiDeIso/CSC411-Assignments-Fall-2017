@@ -29,6 +29,7 @@
 \usepackage{pstricks}
 \usepackage{rotating}
 \usepackage[]{algorithm2e}
+\usepackage{pdfpages}
 
 
 \makeatletter
@@ -166,11 +167,7 @@
 \setcounter{page}{1}
 
 \section{1 - Class Conditional Gaussians}
-\subsection{1 - Using Bayes’ rule to derive an expression for $p(y = kx, \mu,\sigma)$}
-\subsection{2 - Expression for the negative likelihood function (NLL)}
-\subsection{3 - Partial Derivatives of the Likelihood}
-\subsection{4 - Find the maximum likelihood estimates for $\mu$ and $\sigma$}
-
+\includepdf[pages=-,pagecommand={},width=\textwidth]{math.pdf}
 
 \section{2 - Handwritten Digit Classification}
 \subsection{0 - Loading the data and Plotting the Feature Means}
@@ -196,27 +193,8 @@ The means (from 700 samples per digit) for each feature (64 features in total fo
 
 \subsubsection{Tie Breaker Method}
 
-There are cases in K-Nearest Neighbours where there isn't one most frequent neighbours (there might be two neighbours that occur equally frequently). 
-
-Therefore, in such cases a tie breaking decision needs to be made. I have chosen to reduce the number of nearest neighbours by one - \textbf{effectively removing the last neighbour and repeating the check until a decision can be made}.
-
-\begin{algorithm}[H]
- \KwData{K Nearest Neighbours Array with a tie}
- \KwResult{Nearest Neighbours Decided}
- initialization\;
- \While{not at end of this document}{
-  read current\;
-  \eIf{understand}{
-   go to next section\;
-   current section becomes this one\;
-   }{
-   go back to the beginning of current section\;
-  }
- }
- \caption{Tie Breaker Pseudo code}
-\end{algorithm}
- 
-
+There are cases in K-Nearest Neighbours where there isn't one most frequent neighbours (there might be two neighbours that occur equally frequently). Therefore, in such cases a tie breaking decision needs to be made. I have chosen to reduce the number of nearest neighbours by one - \textbf{effectively removing the last neighbour and repeating the check until a decision can be made}.
+\\ \\
 This method was chosen because: 
 \begin{enumerate}
 \item The tie remains until the \textit{most distant} neighbour from one of the most frequent neighbours is removed. This rewards the neighbour with the closest value in such cases.
@@ -285,6 +263,21 @@ For the most likely posterior class, the training and test set accuracies are:
 
 
 \subsection{4 -  Model Comparison}
+
+The models performed from (best to worst): 
+\begin{enumerate}
+\item Conditional Gaussian Classifier
+\item K-Nearest Neighbours
+\item Naive Bayes Classifier
+\end{enumerate}
+
+The superior performance of the conditional Gaussian Classifier over the Naive Bayes Classifier would make sense as Naive Bayes assumes more assumptions (in terms of independence among features, which did not exist).
+
+The K-NNs surprisingly performed worse as the number of neighbours increased. One would have assumed that increasing the size of K would smooth the decision plane boundaries. One reason could be that the number of samples per digit (700) was too small to see an improvement in performance. 
+
+
+
+
 
 
 \pagebreak
