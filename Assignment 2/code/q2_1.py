@@ -174,8 +174,8 @@ def main():
     print('Training Data Classification Accuracy for K=1:',classification_accuracy(knn, 1, train_data, train_labels))
     print('Training Data Classification Accuracy for K=15:', classification_accuracy(knn, 15, train_data, train_labels))
 
-    print('Training Data Classification Accuracy for K=1:', classification_accuracy(knn, 1, test_data, test_labels))
-    print('Training Data Classification Accuracy for K=15:', classification_accuracy(knn, 15, test_data, test_labels))
+    print('Test Data Classification Accuracy for K=1:', classification_accuracy(knn, 1, test_data, test_labels))
+    print('Test Data Classification Accuracy for K=15:', classification_accuracy(knn, 15, test_data, test_labels))
 
 
     print('Training Data')

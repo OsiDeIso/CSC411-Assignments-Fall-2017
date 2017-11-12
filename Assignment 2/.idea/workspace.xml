@@ -23,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="q2_1.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="q2_1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/q2_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+            <state relative-caret-position="212">
+              <caret line="164" column="26" lean-forward="true" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
               <folding>
                 <element signature="e#97#108#0" expanded="true" />
               </folding>
@@ -38,8 +38,8 @@
       <file leaf-file-name="q2_2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/q2_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="300" selection-end-column="34" />
+            <state relative-caret-position="462">
+              <caret line="299" column="22" lean-forward="false" selection-start-line="299" selection-start-column="22" selection-end-line="299" selection-end-column="22" />
               <folding>
                 <element signature="e#113#124#0" expanded="true" />
               </folding>
@@ -47,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="q2_3.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="q2_3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/q2_3.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="402">
@@ -83,15 +83,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/code/q2_0.py" />
-        <option value="$PROJECT_DIR$/code/q2_1.py" />
         <option value="$PROJECT_DIR$/code/q2_2.py" />
         <option value="$PROJECT_DIR$/code/q2_3.py" />
+        <option value="$PROJECT_DIR$/code/q2_1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2000" />
-    <option name="y" value="67" />
+    <option name="x" value="2731" />
+    <option name="y" value="754" />
     <option name="width" value="1658" />
     <option name="height" value="938" />
   </component>
@@ -145,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.q2_3">
+  <component name="RunManager" selected="Python.q2_1">
     <configuration name="q2_0" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -222,9 +222,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.q2_3" />
-        <item index="1" class="java.lang.String" itemvalue="Python.q2_2" />
-        <item index="2" class="java.lang.String" itemvalue="Python.q2_1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.q2_1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.q2_3" />
+        <item index="2" class="java.lang.String" itemvalue="Python.q2_2" />
         <item index="3" class="java.lang.String" itemvalue="Python.q2_0" />
       </list>
     </recent_temporary>
@@ -243,7 +243,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2000" y="67" width="1658" height="938" extended-state="0" />
+    <frame x="2731" y="754" width="1658" height="938" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2110977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -386,6 +386,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/q2_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="236" column="30" lean-forward="true" selection-start-line="236" selection-start-column="30" selection-end-line="236" selection-end-column="30" />
+          <folding>
+            <element signature="e#104#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/q2_0.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -396,32 +406,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/q2_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-          <folding>
-            <element signature="e#97#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/q2_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="300" selection-end-column="34" />
+        <state relative-caret-position="462">
+          <caret line="299" column="22" lean-forward="false" selection-start-line="299" selection-start-column="22" selection-end-line="299" selection-end-column="22" />
           <folding>
             <element signature="e#113#124#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/q2_3.py">
+    <entry file="file://$PROJECT_DIR$/code/q2_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="236" column="30" lean-forward="true" selection-start-line="236" selection-start-column="30" selection-end-line="236" selection-end-column="30" />
+        <state relative-caret-position="212">
+          <caret line="164" column="26" lean-forward="true" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
           <folding>
-            <element signature="e#104#115#0" expanded="true" />
+            <element signature="e#97#108#0" expanded="true" />
           </folding>
         </state>
       </provider>

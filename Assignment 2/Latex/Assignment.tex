@@ -180,18 +180,18 @@ The means (from 700 samples per digit) for each feature (64 features in total fo
 
 
 \subsection{1 -  K-NN Classifier}
-\subsubsection{Train and Test Classification Accuracy for K=1 and K=15}
+\subsubsection{2.1.1 Train and Test Classification Accuracy for K=1 and K=15}
 
-\begin{center}
-\begin{tabular}{lll}
-                             & Accuracy                                  &                                         \\ \cline{2-3} 
-\multicolumn{1}{l|}{K Value} & \multicolumn{1}{l|}{Train Classification} & \multicolumn{1}{l|}{Test Classification} \\ \hline
-\multicolumn{1}{|l|}{K = 1}  & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{}                    \\ \hline
-\multicolumn{1}{|l|}{K = 15} & \multicolumn{1}{l|}{}                     & \multicolumn{1}{l|}{}                    \\ \hline
-\end{tabular}
-\end{center}
+Training Data Classification Accuracy for K=1: 1.0
+\\
+Training Data Classification Accuracy for K=15: 0.961
+\\
+Test Data Classification Accuracy for K=1: 0.96875
+\\
+Test Data Classification Accuracy for K=15: 0.959
 
-\subsubsection{Tie Breaker Method}
+
+\subsubsection{2.1.2 Tie Breaker Method}
 
 There are cases in K-Nearest Neighbours where there isn't one most frequent neighbours (there might be two neighbours that occur equally frequently). Therefore, in such cases a tie breaking decision needs to be made. I have chosen to reduce the number of nearest neighbours by one - \textbf{effectively removing the last neighbour and repeating the check until a decision can be made}.
 \\ \\
@@ -201,15 +201,24 @@ This method was chosen because:
 \item This decision making method is intuitive to understand and easy to implement.
 \end{enumerate}
 
+\subsubsection{2.1.3 Optimal K}
+
+\textbf{The optimal K from applying 10-folds on the data set is K=3.}
+\\ \\
+Training Data Classification Accuracy for K=3 on 10-folds: 0.9865
+\\
+Test Data Classification Accuracy for K=3 on 10-folds: 0.9697
+
+
 \subsection{2 -  Conditional Gaussian Classifier Training}
 
-\subsubsection{Plot of the Diagonal Elements of the Covariance Matrix}
+\subsubsection{2.2.0 Plot of the Diagonal Elements of the Covariance Matrix}
 
 \begin{center}
 \includegraphics[scale=1]{covariances.png}
 \end{center}
 
-\subsubsection{Average Conditional (Log) Likelihoods}
+\subsubsection{2.2.1 Average Conditional (Log) Likelihoods}
 
 The average conditional (log) likelihoods were compute for the train set and the test set are:
 \begin{center}
@@ -218,7 +227,7 @@ The average conditional (log) likelihoods were compute for the train set and the
 \textbf{Test Data Set: } -0.196673203255
 \end{center}
 
-\subsubsection{Accuracy for the Most Likely Posterior Class}
+\subsubsection{2.2.3 Accuracy for the Most Likely Posterior Class}
 
 For the most likely posterior class, the training and test set accuracies are: 
 \begin{center}
@@ -230,19 +239,19 @@ For the most likely posterior class, the training and test set accuracies are:
 
 \subsection{3 -   Naive Bayes Classifier Training}
 
-\subsubsection{Plot of Eta}
+\subsubsection{2.3.3 Plot of Eta}
 
 \begin{center}
 \includegraphics[scale=1]{q2_3_1.png}
 \end{center}
 
-\subsubsection{Plot of Generated Binarized Data (Using a Binomial Disribution)}
+\subsubsection{2.3.4 Plot of Generated Binarized Data (Using a Binomial Disribution)}
 \begin{center}
 \includegraphics[scale=1]{q2_3_1_binomial.png}
 \end{center}
 
 
-\subsubsection{Average Conditional (Log) Likelihoods}
+\subsubsection{2.3.5 Average Conditional (Log) Likelihoods}
 
 The average conditional (log) likelihoods were compute for the train set and the test set are:
 \begin{center}
@@ -251,7 +260,7 @@ The average conditional (log) likelihoods were compute for the train set and the
 \textbf{Test Data Set: } -0.987270433725
 \end{center}
 
-\subsubsection{Accuracy for the Most Likely Posterior Class}
+\subsubsection{2.3.6 Accuracy for the Most Likely Posterior Class}
 
 For the most likely posterior class, the training and test set accuracies are: 
 \begin{center}
