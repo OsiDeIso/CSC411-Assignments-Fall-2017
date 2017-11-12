@@ -6,6 +6,8 @@
 \contentsline {section}{2 - Handwritten Digit Classification}{1}{section*.7}
 \contentsline {subsection}{0 - Loading the data and Plotting the Feature Means}{1}{section*.8}
 \contentsline {subsection}{1 - K-NN Classifier}{1}{section*.9}
-\contentsline {subsection}{2 - Conditional Gaussian Classifier Training}{1}{section*.10}
-\contentsline {subsection}{3 - Naive Bayes Classifier Training}{1}{section*.11}
-\contentsline {subsection}{4 - Model Comparison}{1}{section*.12}
+\contentsline {subsubsection}{Train and Test Classification Accuracy for K=1 and K=15}{1}{section*.10}
+\contentsline {subsubsection}{Tie Breaker Method}{1}{section*.11}
+\contentsline {subsection}{2 - Conditional Gaussian Classifier Training}{2}{section*.12}
+\contentsline {subsection}{3 - Naive Bayes Classifier Training}{2}{section*.13}
+\contentsline {subsection}{4 - Model Comparison}{2}{section*.14}

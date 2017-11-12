@@ -33,6 +33,8 @@ def plot_images(class_images):
         img_i = class_images[i]
         # ...
 
+        # Can be copied from 2 0
+
 def generate_new_data(eta):
     '''
     Sample a new data point from your generative distribution p(x|y,theta) for
@@ -61,6 +63,9 @@ def conditional_likelihood(bin_digits, eta):
     This should be a numpy array of shape (n, 10)
     Where n is the number of datapoints and 10 corresponds to each digit class
     '''
+
+    # Can be copied from
+
     return None
 
 def avg_conditional_likelihood(bin_digits, labels, eta):
@@ -74,6 +79,9 @@ def avg_conditional_likelihood(bin_digits, labels, eta):
     cond_likelihood = conditional_likelihood(bin_digits, eta)
 
     # Compute as described above and return
+
+    # Can be copied from
+
     return None
 
 def classify_data(bin_digits, eta):
@@ -82,6 +90,9 @@ def classify_data(bin_digits, eta):
     '''
     cond_likelihood = conditional_likelihood(bin_digits, eta)
     # Compute and return the most likely class
+
+    # Can be copied
+
     pass
 
 def main():
