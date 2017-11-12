@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  12 NOV 2017 01:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  12 NOV 2017 15:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1086,7 +1086,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 172.
 
-<averages.png, id=89, 397.485pt x 72.27pt>
+<averages.png, id=119, 397.485pt x 72.27pt>
 File: averages.png Graphic file (type png)
  <use averages.png>
 Package pdftex.def Info: averages.png used on input line 181.
@@ -1098,29 +1098,55 @@ been already used, duplicate ignored
 l.202 
        [1
 
- <./averages.png>]pdfTeX warning (ext4): destination with the same identifier (
-name{page.2}) has been already used, duplicate ignored
+ <./averages.png>] <covariances.png, id=126, 397.485pt x 72.27pt>
+File: covariances.png Graphic file (type png)
+
+<use covariances.png>
+Package pdftex.def Info: covariances.png used on input line 231.
+(pdftex.def)             Requested size: 397.48402pt x 72.2698pt.
+ <q2_3_1.png, id=127, 397.485pt x 72.27pt>
+File: q2_3_1.png Graphic file (type png)
+
+<use q2_3_1.png>
+Package pdftex.def Info: q2_3_1.png used on input line 258.
+(pdftex.def)             Requested size: 397.48402pt x 72.2698pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 
-       [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+l.259 \end{center}
+                   [2 <./covariances.png>]
+<q2_3_1_binomial.png, id=137, 396.7623pt x 72.27pt>
+File: q2_3_1_binomial.png Graphic file (type png)
+ <use q2_3_1_binomial.png>
+Package pdftex.def Info: q2_3_1_binomial.png used on input line 263.
+(pdftex.def)             Requested size: 396.76132pt x 72.2698pt.
+
+[3 <./q2_3_1.png> <./q2_3_1_binomial.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
  (./Assignment.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
-Package rerunfilecheck Info: File `Assignment.out' has not changed.
-(rerunfilecheck)             Checksum: D0AB943908286AF090529C09F3F89687;1116.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 293.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 293.
+
+
+Package rerunfilecheck Warning: File `Assignment.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Assignment.out':
+(rerunfilecheck)             Before: 15D75EF375024F98261F0BF880C068E6;1641
+(rerunfilecheck)             After:  1AD77896B8CC477248B0248C68345566;1755.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 22074 strings out of 493014
- 408944 string characters out of 6133351
- 671622 words of memory out of 5000000
- 25157 multiletter control sequences out of 15000+600000
+ 22103 strings out of 493014
+ 409382 string characters out of 6133351
+ 672623 words of memory out of 5000000
+ 25175 multiletter control sequences out of 15000+600000
  13701 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,66p,796b,2240s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1134,10 +1160,10 @@ r12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
 .pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pf
 b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 >
-Output written on Assignment.pdf (4 pages, 126015 bytes).
+Output written on Assignment.pdf (5 pages, 142234 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

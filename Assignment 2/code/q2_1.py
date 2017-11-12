@@ -161,13 +161,24 @@ def classification_accuracy(knn, k, eval_data, eval_labels):
         number_of_evaluated_samples +=1
 
     accuracy = (number_of_correctly_evaluated_samples/number_of_evaluated_samples)
+
+    # Debugging Statements
     # print('k = ', k, 'accuracy = ', accuracy)
+
     return accuracy
 
 def main():
     train_data, train_labels, test_data, test_labels = data.load_all_data('data')
 
-    print('training')
+    knn = KNearestNeighbor(train_data, train_labels)
+    print('Training Data Classification Accuracy for K=1:',classification_accuracy(knn, 1, train_data, train_labels))
+    print('Training Data Classification Accuracy for K=15:', classification_accuracy(knn, 15, train_data, train_labels))
+
+    print('Training Data Classification Accuracy for K=1:', classification_accuracy(knn, 1, test_data, test_labels))
+    print('Training Data Classification Accuracy for K=15:', classification_accuracy(knn, 15, test_data, test_labels))
+
+
+    print('Training Data')
     cross_validation(train_data,train_labels)
     print('test')
     cross_validation(test_data, test_labels)

@@ -9,5 +9,12 @@
 \BOOKMARK [3][-]{section*.10}{Train and Test Classification Accuracy for K=1 and K=15}{section*.9}% 9
 \BOOKMARK [3][-]{section*.11}{Tie Breaker Method}{section*.9}% 10
 \BOOKMARK [2][-]{section*.12}{2 - Conditional Gaussian Classifier Training}{section*.7}% 11
-\BOOKMARK [2][-]{section*.13}{3 - Naive Bayes Classifier Training}{section*.7}% 12
-\BOOKMARK [2][-]{section*.14}{4 - Model Comparison}{section*.7}% 13
+\BOOKMARK [3][-]{section*.13}{Plot of the Diagonal Elements of the Covariance Matrix}{section*.12}% 12
+\BOOKMARK [3][-]{section*.14}{Average Conditional \(Log\) Likelihoods}{section*.12}% 13
+\BOOKMARK [3][-]{section*.15}{Accuracy for the Most Likely Posterior Class}{section*.12}% 14
+\BOOKMARK [2][-]{section*.16}{3 - Naive Bayes Classifier Training}{section*.7}% 15
+\BOOKMARK [3][-]{section*.17}{Plot of Eta}{section*.16}% 16
+\BOOKMARK [3][-]{section*.18}{Plot of Generated Binarized Data \(Using a Binomial Disribution\)}{section*.16}% 17
+\BOOKMARK [3][-]{section*.19}{Average Conditional \(Log\) Likelihoods}{section*.16}% 18
+\BOOKMARK [3][-]{section*.20}{Accuracy for the Most Likely Posterior Class}{section*.16}% 19
+\BOOKMARK [2][-]{section*.21}{4 - Model Comparison}{section*.7}% 20

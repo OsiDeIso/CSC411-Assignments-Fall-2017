@@ -200,8 +200,6 @@ There are cases in K-Nearest Neighbours where there isn't one most frequent neig
 
 Therefore, in such cases a tie breaking decision needs to be made. I have chosen to reduce the number of nearest neighbours by one - \textbf{effectively removing the last neighbour and repeating the check until a decision can be made}.
 
-The algorithm's psuedo-code is:
-
 \begin{algorithm}[H]
  \KwData{K Nearest Neighbours Array with a tie}
  \KwResult{Nearest Neighbours Decided}
@@ -215,7 +213,7 @@ The algorithm's psuedo-code is:
    go back to the beginning of current section\;
   }
  }
- \caption{How to write algorithms}
+ \caption{Tie Breaker Pseudo code}
 \end{algorithm}
  
 
@@ -225,10 +223,67 @@ This method was chosen because:
 \item This decision making method is intuitive to understand and easy to implement.
 \end{enumerate}
 
-
-
 \subsection{2 -  Conditional Gaussian Classifier Training}
+
+\subsubsection{Plot of the Diagonal Elements of the Covariance Matrix}
+
+\begin{center}
+\includegraphics[scale=1]{covariances.png}
+\end{center}
+
+\subsubsection{Average Conditional (Log) Likelihoods}
+
+The average conditional (log) likelihoods were compute for the train set and the test set are:
+\begin{center}
+\textbf{Train Data Set: } -0.124624436669
+\\
+\textbf{Test Data Set: } -0.196673203255
+\end{center}
+
+\subsubsection{Accuracy for the Most Likely Posterior Class}
+
+For the most likely posterior class, the training and test set accuracies are: 
+\begin{center}
+\textbf{Train Data Set: } 0.9814
+\\
+\textbf{Test Data Set: } 0.9727
+\end{center}
+
+
 \subsection{3 -   Naive Bayes Classifier Training}
+
+\subsubsection{Plot of Eta}
+
+\begin{center}
+\includegraphics[scale=1]{q2_3_1.png}
+\end{center}
+
+\subsubsection{Plot of Generated Binarized Data (Using a Binomial Disribution)}
+\begin{center}
+\includegraphics[scale=1]{q2_3_1_binomial.png}
+\end{center}
+
+
+\subsubsection{Average Conditional (Log) Likelihoods}
+
+The average conditional (log) likelihoods were compute for the train set and the test set are:
+\begin{center}
+\textbf{Train Data Set: } -0.9437538618
+\\
+\textbf{Test Data Set: } -0.987270433725
+\end{center}
+
+\subsubsection{Accuracy for the Most Likely Posterior Class}
+
+For the most likely posterior class, the training and test set accuracies are: 
+\begin{center}
+\textbf{Train Data Set: } 0.7741
+\\
+\textbf{Test Data Set: } 0.7642
+\end{center}
+
+
+
 \subsection{4 -  Model Comparison}
 
 

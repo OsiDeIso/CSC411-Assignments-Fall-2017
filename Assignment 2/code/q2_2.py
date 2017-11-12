@@ -107,7 +107,9 @@ def compute_sigma_mles(train_data, train_labels):
                 # Put the sum in the covariance matrix
                 covariances[i][j][k]= sum
 
-    return covariances + 0.01 * np.identity(IMAGE_SIZE * IMAGE_SIZE)
+    # Add the 0.01I to the entire covariance matrix to avoid divide by 0 errors
+    covariances = covariances + 0.01 * np.identity(IMAGE_SIZE * IMAGE_SIZE)
+    return covariances
 
 def plot_cov_diagonal(covariances):
     # Plot the log-diagonal of each covariance matrix side by side
@@ -128,6 +130,9 @@ def plot_cov_diagonal(covariances):
     # Plot using q2_0 style
     all_concat = np.concatenate(variances, 1)
     plt.imshow(all_concat, cmap='gray')
+
+    # Customizing the Plot:
+    plt.title("Covariance Diagonals")
     plt.show()
 
     return
@@ -201,8 +206,6 @@ def conditional_likelihood(digits, means, covariances):
     # 1: p(x|y, mu, Sigma) * p(y)
     # 2: p(x, mu, Sigma)
 
-
-
     # Make a conditional likelihood array
     cond_likelihood = np.zeros((digits.shape[0], 10))
 
@@ -222,7 +225,6 @@ def conditional_likelihood(digits, means, covariances):
 
     return cond_likelihood
 
-# Henrys
 def avg_conditional_likelihood(digits, labels, means, covariances):
     '''
     Compute the average conditional likelihood over the true class labels
@@ -235,14 +237,16 @@ def avg_conditional_likelihood(digits, labels, means, covariances):
 
     # Compute as described above and return
 
-    # Make a likelihood list to populate conditional liklihoods in
+    # Make a likelihood list to populate conditional likelihoods in
     likelihoods = []
 
-    # Iterate through every conditional likelihood matrix
+    # Make the output classes into integers for indexing purposes
+    # within the conditional likelihood
     integer_labels = []
     for i in range(labels.shape[0]):
         integer_labels.append(int(labels[i]))
 
+    # Iterate through every conditional likelihood matrix
     for i in range(cond_likelihood.shape[0]):
         # Add the likelihoods for a given iteration for a given iteration's label
         # What is the likelihood for a given a given digit sample, for a given digit outcome
@@ -271,29 +275,29 @@ def main():
     train_data, train_labels, test_data, test_labels = data.load_all_data('data')
 
     # Fit the model
-    # means = compute_mean_mles(train_data, train_labels)
-    # covariances = compute_sigma_mles(train_data, train_labels)
-    # generative_likelihood(train_data, means, covariances)
+    means = compute_mean_mles(train_data,train_labels)
+    covariances = compute_sigma_mles(train_data, train_labels)
+    generative_likelihood(train_data, means, covariances)
 
     # Evaluation
 
-    #n2c
+    # Obtain average likelihoods for train and test data sets
+    average_likelihood_for_training_data = avg_conditional_likelihood(train_data, train_labels, means, covariances)
+    print("Average Conditional (Log) Likelihood for Training data: ",average_likelihood_for_training_data)
 
-    # Fit the model
-    means = compute_mean_mles(train_data, train_labels)
-    covariances = compute_sigma_mles(train_data, train_labels)
-    # Compute Average Likelihoods
-    average_likelihood_training = avg_conditional_likelihood(train_data, train_labels, means, covariances)
-    average_likelihood_test = avg_conditional_likelihood(test_data, test_labels, means, covariances)
-    # Compute classification predictions
+    average_likelihood_for_test_data = avg_conditional_likelihood(test_data, test_labels, means, covariances)
+    print("Average Conditional (Log) Likelihood for Test data: ", average_likelihood_for_test_data)
+
+    # Make Predictions for the train and test sets
     prediction_training = classify_data(train_data, means, covariances)
-    prediction_test = classify_data(test_data, means, covariances)
-    # Compute accuracy
-    accuracy_training = classification_accuracy(prediction_training, train_labels)
-    accuracy_test = classification_accuracy(prediction_test, test_labels)
-    print("Average Conditional Likelihood:", "\nTraining:", average_likelihood_training, "\nTest:", average_likelihood_test)
-    print("Classification Accuracy:", "\nTraining:", accuracy_training, "\nTest:", accuracy_test)
-    # Plot covariance diagonals
+    accuracy_for_training_data = classification_accuracy(prediction_training,train_labels)
+    print("Classification Accuracy for Training Data: ",accuracy_for_training_data)
+
+    prediction_testing = classify_data(test_data, means, covariances)
+    accuracy_for_testing_data = classification_accuracy(prediction_testing,test_labels)
+    print("Classification Accuracy for Testing Data: ",accuracy_for_testing_data)
+
+    # Plot the Covariances Diagonals at the end as it blocks all other executions
     plot_cov_diagonal(covariances)
 
 
