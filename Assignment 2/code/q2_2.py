@@ -12,10 +12,9 @@ import matplotlib.pyplot as plt
 IMAGE_SIZE = 8
 P_Y = 0.10
 
+# Copied from as Q2_1: go through each label and see if it matches
+# If it does, increase the count. At the end, get the ratio for accuracy
 def classification_accuracy(pred_labels, eval_labels):
-
-    # Same thing as Q2_1: go through each label and see if it matches
-    # If it does, increase the count. At the end, get the ratio for accuracy
 
     number_of_evaluated_samples = 0
     number_of_correctly_evaluated_samples = 0
@@ -41,7 +40,7 @@ def compute_mean_mles(train_data, train_labels):
 
     # Compute means for every feature (64) for all samples
     # for a given digit
-    for i in range(len(means)):
+    for i in range(means.shape[0]):
 
         # Get the indicies for every digit i
         digit_indicies = np.where(train_labels == i)
@@ -246,6 +245,7 @@ def avg_conditional_likelihood(digits, labels, means, covariances):
 
     for i in range(cond_likelihood.shape[0]):
         # Add the likelihoods for a given iteration for a given iteration's label
+        # What is the likelihood for a given a given digit sample, for a given digit outcome
         likelihoods.append(cond_likelihood[i][integer_labels[i]])
 
     # Take the average of the obtained list
