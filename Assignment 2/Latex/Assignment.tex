@@ -167,6 +167,8 @@
 \setcounter{page}{1}
 
 \section{1 - Class Conditional Gaussians}
+This page has been left blank. The math solutions are handwritten on the next page onwards.
+
 \includepdf[pages=-,pagecommand={},width=\textwidth]{math.pdf}
 
 \section{2 - Handwritten Digit Classification}
@@ -280,9 +282,13 @@ The models performed from (best to worst):
 \item Naive Bayes Classifier
 \end{enumerate}
 
+Conditional Gaussian Classifier obtained a test accuracy of 97\% followed by the KNNs (for K=3) at 96\% and then the Naive Bayes Classifier at 0.76\%.
+\\ \\
 The superior performance of the conditional Gaussian Classifier over the Naive Bayes Classifier would make sense as Naive Bayes assumes more assumptions (in terms of independence among features, which did not exist).
-
-The K-NNs surprisingly performed worse as the number of neighbours increased. One would have assumed that increasing the size of K would smooth the decision plane boundaries. One reason could be that the number of samples per digit (700) was too small to see an improvement in performance. 
+\\ \\
+The independence among features does not exist because if a pixel was shaded black, the surrounding pixels would be probably black also. From black to white (in pixels), there is a gradual change. This change is hi-lighted by the covariance matrix. If there was a relationship between certain features, it would be greater than 0. 
+\\ \\
+The K-NNs surprisingly performed worse as the number of neighbours increased. One would have assumed that increasing the size of K would smooth the decision plane boundaries. One reason could be that the number of samples per digit (700) was too small to see an improvement in performance. However, the fact that after K=3 shows that after 3, it becomes hyper-sensitive towards neighbour boundaries. This is one explanation.
 
 
 
