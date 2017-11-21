@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section*.2}{1 - 20 Newsgroup Predictions}{}% 1
+\BOOKMARK [1][-]{section*.3}{2 - Training SVM with SGD}{}% 2
+\BOOKMARK [2][-]{section*.4}{2.1 - SGD with Momentum}{section*.3}% 3
+\BOOKMARK [2][-]{section*.5}{2.2 -Training SVM}{section*.3}% 4
+\BOOKMARK [2][-]{section*.6}{2.3 - Apply 4-vs-9 Digits on MNIST}{section*.3}% 5
+\BOOKMARK [3][-]{section*.7}{2.3.1 - Training Loss}{section*.6}% 6
+\BOOKMARK [3][-]{section*.8}{2.3.2 - Test Loss}{section*.6}% 7
+\BOOKMARK [3][-]{section*.9}{2.3.3 - Classification Accuracy on the Training Set}{section*.6}% 8
+\BOOKMARK [3][-]{section*.10}{2.3.4 - Classification Accruacy on the Test Set}{section*.6}% 9
+\BOOKMARK [3][-]{section*.11}{2.3.5 - Plot w as a 28 \04028 image }{section*.6}% 10
+\BOOKMARK [1][-]{section*.12}{3 - Kernels}{}% 11
+\BOOKMARK [2][-]{section*.13}{3.1 - Positive Semi definite and Quadratic Form}{section*.12}% 12
+\BOOKMARK [2][-]{section*.14}{3.2 - Kernel Properties}{section*.12}% 13
+\BOOKMARK [3][-]{section*.15}{3.2.1 - Prove Property}{section*.14}% 14
+\BOOKMARK [3][-]{section*.16}{3.2.2 - Prove Property}{section*.14}% 15
+\BOOKMARK [3][-]{section*.17}{3.2.3 - Prove Property}{section*.14}% 16
+\BOOKMARK [3][-]{section*.18}{3.2.4 - Prove Property}{section*.14}% 17
