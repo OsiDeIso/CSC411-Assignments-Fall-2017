@@ -197,7 +197,7 @@ Proof:
 K\textbf{x} = \lambda \textbf{x}
 \]
 
-where $\lambda$ is the eigenvalue and $v$ is the eigenvector. 
+where $\lambda$ is the eigenvalue and $\textbf{x}$ is the eigenvector. 
 \\ \\
 Suppose $\textbf{x}$ is an eigenvector of $K$ and replacing $K\textbf{v}$ with $\lambda \textbf{v}$ (from the definition of an eigenvector and eigenvalue above):
 \[
@@ -208,11 +208,28 @@ Suppose $\textbf{x}$ is an eigenvector of $K$ and replacing $K\textbf{v}$ with $
 \textbf{x}^{T}K\textbf{x} = |\textbf{x}|^{2} \lambda
 \]
 
-Therefore, as $|\textbf{x}|^{2} \geq 0$, for the equation $\textbf{x}^{T}K\textbf{x} \geq 0$, the eigenvalue must be: $\lambda \geq 0$. Since it is a semi-definite matrix, where the eigenvalues $\geq 0$, this holds true. 
+Therefore, as $|\textbf{x}|^{2} \geq 0$, for the equation $\textbf{x}^{T}K\textbf{x} \geq 0$, the eigenvalue must be: $\lambda \geq 0$. Since it is a semi-definite matrix, where the eigenvalues $\geq 0$, this holds true.  
 
 
 \subsection{3.2 - Kernel Properties}
-\subsubsection{3.2.1 - Prove Property}
+\subsubsection{3.2.1 - Prove Property $k(\textbf{x},\textbf{y}) = \alpha $ is a kernel for $\alpha > 0$}
+
+\[
+\phi(\textbf{x}) = \sqrt{\alpha}
+\]
+
+\[
+k(\textbf{x},\textbf{y}) = \langle \phi(\textbf{x}), \phi(\textbf{y}) \rangle
+\]
+
+\[
+k(\textbf{x},\textbf{y}) = \sqrt{\alpha} \sqrt{\alpha}
+\]
+
+\[
+k(\textbf{x},\textbf{y}) = \alpha
+\]
+
 \subsubsection{3.2.2 - Prove Property}
 \subsubsection{3.2.3 - Prove Property}
 \subsubsection{3.2.4 - Prove Property}
