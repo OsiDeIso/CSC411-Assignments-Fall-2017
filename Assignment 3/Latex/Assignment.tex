@@ -188,6 +188,29 @@ Plotting $w_t$ for each time step $t$ by applying the iterative stochastic gradi
 
 \section{3 - Kernels}
 \subsection{3.1 - Positive Semi definite and Quadratic Form}
+
+Prove that a symmetric matrix $K \in \mathbb{R}^{d \times d} $ is a positive semi definite iff for all vectors $x$ we have $\textbf{x}^{T}K\textbf{x} \geq 0$.
+\\ \\
+Proof: 
+
+\[
+K\textbf{x} = \lambda \textbf{x}
+\]
+
+where $\lambda$ is the eigenvalue and $v$ is the eigenvector. 
+\\ \\
+Suppose $\textbf{x}$ is an eigenvector of $K$ and replacing $K\textbf{v}$ with $\lambda \textbf{v}$ (from the definition of an eigenvector and eigenvalue above):
+\[
+\textbf{x}^{T}K\textbf{x} = \textbf{x}^{T} \textbf{x} \lambda
+\]
+
+\[
+\textbf{x}^{T}K\textbf{x} = |\textbf{x}|^{2} \lambda
+\]
+
+Therefore, as $|\textbf{x}|^{2} \geq 0$, for the equation $\textbf{x}^{T}K\textbf{x} \geq 0$, the eigenvalue must be: $\lambda \geq 0$. Since it is a semi-definite matrix, where the eigenvalues $\geq 0$, this holds true. 
+
+
 \subsection{3.2 - Kernel Properties}
 \subsubsection{3.2.1 - Prove Property}
 \subsubsection{3.2.2 - Prove Property}
@@ -203,128 +226,7 @@ Plotting $w_t$ for each time step $t$ by applying the iterative stochastic gradi
 
 $
 
-\section{1 - Class Conditional Gaussians}
-This page has been left blank. The math solutions are handwritten on the next page onwards.
-
-%\includepdf[pages=-,pagecommand={},width=\textwidth]{math.pdf}
-
-\section{2 - Handwritten Digit Classification}
-\subsection{0 - Loading the data and Plotting the Feature Means}
-
-The means (from 700 samples per digit) for each feature (64 features in total for an 8-by-8 pixel image) for 10 digits (digit 0 to digit 9) are plotted below: 
-
-\begin{center}
-%\includegraphics[scale=1]{averages.png}
-\end{center}
 
 
-\subsection{1 -  K-NN Classifier}
-\subsubsection{2.1.1 Train and Test Classification Accuracy for K=1 and K=15}
-
-Training Data Classification Accuracy for K=1: 1.0
-\\
-Training Data Classification Accuracy for K=15: 0.961
-\\
-Test Data Classification Accuracy for K=1: 0.96875
-\\
-Test Data Classification Accuracy for K=15: 0.959
-
-
-\subsubsection{2.1.2 Tie Breaker Method}
-
-There are cases in K-Nearest Neighbours where there isn't one most frequent neighbours (there might be two neighbours that occur equally frequently). Therefore, in such cases a tie breaking decision needs to be made. I have chosen to reduce the number of nearest neighbours by one - \textbf{effectively removing the last neighbour and repeating the check until a decision can be made}.
-\\ \\
-This method was chosen because: 
-\begin{enumerate}
-\item The tie remains until the \textit{most distant} neighbour from one of the most frequent neighbours is removed. This rewards the neighbour with the closest value in such cases.
-\item This decision making method is intuitive to understand and easy to implement.
-\end{enumerate}
-
-\subsubsection{2.1.3 Optimal K}
-
-\textbf{The optimal K from applying 10-folds on the data set is K=3.}
-\\ \\
-Training Data Classification Accuracy for K=3 on 10-folds: 0.9865
-\\
-Test Data Classification Accuracy for K=3 on 10-folds: 0.9697
-
-
-\subsection{2 -  Conditional Gaussian Classifier Training}
-
-\subsubsection{2.2.0 Plot of the Diagonal Elements of the Covariance Matrix}
-
-\begin{center}
-%\includegraphics[scale=1]{covariances.png}
-\end{center}
-
-\subsubsection{2.2.1 Average Conditional (Log) Likelihoods}
-
-The average conditional (log) likelihoods were compute for the train set and the test set are:
-\begin{center}
-\textbf{Train Data Set: } -0.124624436669
-\\
-\textbf{Test Data Set: } -0.196673203255
-\end{center}
-
-\subsubsection{2.2.3 Accuracy for the Most Likely Posterior Class}
-
-For the most likely posterior class, the training and test set accuracies are: 
-\begin{center}
-\textbf{Train Data Set: } 0.9814
-\\
-\textbf{Test Data Set: } 0.9727
-\end{center}
-
-
-\subsection{3 -   Naive Bayes Classifier Training}
-
-\subsubsection{2.3.3 Plot of Eta}
-
-\begin{center}
-%\includegraphics[scale=1]{q2_3_1.png}
-\end{center}
-
-\subsubsection{2.3.4 Plot of Generated Binarized Data (Using a Binomial Disribution)}
-\begin{center}
-%\includegraphics[scale=1]{q2_3_1_binomial.png}
-\end{center}
-
-
-\subsubsection{2.3.5 Average Conditional (Log) Likelihoods}
-
-The average conditional (log) likelihoods were compute for the train set and the test set are:
-\begin{center}
-\textbf{Train Data Set: } -0.9437538618
-\\
-\textbf{Test Data Set: } -0.987270433725
-\end{center}
-
-\subsubsection{2.3.6 Accuracy for the Most Likely Posterior Class}
-
-For the most likely posterior class, the training and test set accuracies are: 
-\begin{center}
-\textbf{Train Data Set: } 0.7741
-\\
-\textbf{Test Data Set: } 0.7642
-\end{center}
-
-
-
-\subsection{4 -  Model Comparison}
-
-The models performed from (best to worst): 
-\begin{enumerate}
-\item Conditional Gaussian Classifier
-\item K-Nearest Neighbours
-\item Naive Bayes Classifier
-\end{enumerate}
-
-Conditional Gaussian Classifier obtained a test accuracy of 97\% followed by the KNNs (for K=3) at 96\% and then the Naive Bayes Classifier at 0.76\%.
-\\ \\
-The superior performance of the conditional Gaussian Classifier over the Naive Bayes Classifier would make sense as Naive Bayes assumes more assumptions (in terms of independence among features, which did not exist).
-\\ \\
-The independence among features does not exist because if a pixel was shaded black, the surrounding pixels would be probably black also. From black to white (in pixels), there is a gradual change. This change is hi-lighted by the covariance matrix. If there was a relationship between certain features, it would be greater than 0. 
-\\ \\
-The K-NNs surprisingly performed worse as the number of neighbours increased. One would have assumed that increasing the size of K would smooth the decision plane boundaries. One reason could be that the number of samples per digit (700) was too small to see an improvement in performance. However, the fact that after K=3 shows that after 3, it becomes hyper-sensitive towards neighbour boundaries. This is one explanation.
 
 
