@@ -286,8 +286,44 @@ a \textbf{x}^{T} \textbf{K}_1 \textbf{x} + b \textbf{x}^{T} \textbf{K}_2 \textbf
 \]
 
 
-\subsubsection{3.2.3 - Prove Property If $k_1(\textbf{x},\textbf{y})$ is a kernel then $k(\textbf{x},\textbf{y}) = $ is a kernel}
+\subsubsection{3.2.4 - Prove Property If $k_1(\textbf{x},\textbf{y})$ is a kernel then $k(\textbf{x},\textbf{y}) = \frac{k_1(\textbf{x},\textbf{y})}{\sqrt{k_1(\textbf{x},\textbf{x})} \sqrt{k_1(\textbf{y},\textbf{y})}}$ is a kernel}
 
+Let:
+
+\[
+k_1(\textbf{x},\textbf{y}) = \langle \phi(\textbf{x}), \phi(\textbf{y}) \rangle
+\]
+
+\[
+\langle \phi(\textbf{x}), \phi(\textbf{y}) \rangle = \phi (\textbf{x}) \cdot \phi (\textbf{y})
+\]
+
+In equation $k_1(\textbf{x},\textbf{y})$, replacing all the instances of $k_1(\textbf{x},\textbf{y})$ with $ \phi (\textbf{x}) \cdot \phi (\textbf{y})$: 
+
+
+\[
+k(\textbf{x},\textbf{y}) = \frac{k_1(\textbf{x},\textbf{y})}{\sqrt{k_1(\textbf{x},\textbf{x})} \sqrt{k_1(\textbf{y},\textbf{y})}}
+\]
+
+\[
+k(\textbf{x},\textbf{y}) = \frac{\phi (\textbf{x}) \cdot \phi (\textbf{y})}{\sqrt{\phi (\textbf{x}) \cdot \phi (\textbf{x})} \sqrt{\phi (\textbf{y}) \cdot \phi (\textbf{y})}}
+\]
+
+\[
+k(\textbf{x},\textbf{y}) = \frac{\phi (\textbf{x}) \cdot \phi (\textbf{y})}{|\phi (\textbf{x})| |\phi (\textbf{y})|}
+\]
+
+\[
+k(\textbf{x},\textbf{y}) = \frac{k_1(\textbf{x},\textbf{y})} {|\phi (\textbf{x})| |\phi (\textbf{y})|}
+\]
+
+Let $\textbf{K}_1$ for matrix $k_1(\textbf{x},\textbf{y})$ be a gram matrix. Therefore: 
+
+\[
+\textbf{x}^{T} \textbf{K}_1 \textbf{x} \geq 0
+\]
+
+Multiplying each entry of $k_1$ will result in a positive value. Therefore, $k(\textbf{x},\textbf{y})$ is a kernel.
 
 
 \pagebreak

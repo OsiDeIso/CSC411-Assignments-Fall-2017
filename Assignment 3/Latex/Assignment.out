@@ -14,4 +14,4 @@
 \BOOKMARK [3][-]{section*.15}{3.2.1 - Prove Property k\(x,y\) = \040is a kernel for > 0}{section*.14}% 14
 \BOOKMARK [3][-]{section*.16}{3.2.2 - Prove Property k\(x,y\) = f\(x\) f\(y\) \040is a kernel for \040f: Rd R}{section*.14}% 15
 \BOOKMARK [3][-]{section*.17}{3.2.3 - Prove Property If k1\(x,y\) and k2\(x,y\) are kernels then k\(x,y\) = a k1\(\(x,y\) + b k2\(\(x,y\) for a,b > 0 is a kernel}{section*.14}% 16
-\BOOKMARK [3][-]{section*.18}{3.2.3 - Prove Property If k1\(x,y\) is a kernel then k\(x,y\) = \040is a kernel}{section*.14}% 17
+\BOOKMARK [3][-]{section*.18}{3.2.4 - Prove Property If k1\(x,y\) is a kernel then k\(x,y\) = k1\(x,y\)k1\(x,x\) k1\(y,y\) is a kernel}{section*.14}% 17
