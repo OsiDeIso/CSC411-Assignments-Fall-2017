@@ -247,8 +247,46 @@ k(\textbf{x},\textbf{y}) = f(\textbf{x}) \cdot f(\textbf{y})
 
 \subsubsection{3.2.3 - Prove Property If $k_1(\textbf{x},\textbf{y})$ and $k_2(\textbf{x},\textbf{y})$ are kernels then $k(\textbf{x},\textbf{y}) = a \cdot k_1((\textbf{x},\textbf{y}) + b \cdot k_2((\textbf{x},\textbf{y})$ for $a,b > 0$ is a kernel}
 
+Let $\textbf{K}_1$ and $\textbf{K}_2$ be gram matrices
+\\ \\
+Therefore: 
 
-\subsubsection{3.2.4 - Prove Property}
+\[
+\textbf{x}^{T} \textbf{K}_1 \textbf{x} \geq 0
+\]
+
+and 
+
+\[
+\textbf{x}^{T} \textbf{K}_2 \textbf{x} \geq 0
+\]
+ 
+Let: 
+
+\[
+\textbf{K}_{3}(\textbf{x},\textbf{y}) = a \textbf{K}_{1}(\textbf{x},\textbf{y}) + b  \textbf{K}_{2}(\textbf{x},\textbf{y})
+\]
+
+\[
+\textbf{K}_{3} = a \textbf{K}_{1} + b  \textbf{K}_{2}
+\]
+
+\[
+\textbf{x}^{T} \textbf{K}_3 \textbf{x} = \textbf{x}^{T} ( a \textbf{K}_{1} + b  \textbf{K}_{2}) \textbf{x}
+\]
+
+\[
+\textbf{x}^{T} \textbf{K}_3 \textbf{x} = a \textbf{x}^{T} \textbf{K}_1 \textbf{x} + b \textbf{x}^{T} \textbf{K}_2 \textbf{x}
+\]
+
+and using 3.2.1's proof, $\textbf{K}_{3}(\textbf{x},\textbf{y})$ is a kernel, we get: 
+
+\[
+a \textbf{x}^{T} \textbf{K}_1 \textbf{x} + b \textbf{x}^{T} \textbf{K}_2 \textbf{x} \geq 0 \text{ for } a,b > 0
+\]
+
+
+\subsubsection{3.2.3 - Prove Property If $k_1(\textbf{x},\textbf{y})$ is a kernel then $k(\textbf{x},\textbf{y}) = $ is a kernel}
 
 
 
