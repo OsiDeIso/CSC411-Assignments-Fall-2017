@@ -179,11 +179,67 @@ Plotting $w_t$ for each time step $t$ by applying the iterative stochastic gradi
 
 \subsection{2.2 -Training SVM}
 \subsection{2.3 - Apply 4-vs-9 Digits on MNIST}
+
+Two SVM models were trained using gradient descent. Both models had the following properties: 
+
+\begin{enumerate}
+\item A learning rate of $\alpha = 0.05 $
+\item A penalty of $C = 1.0$
+\item Mini-batch sizes of $m = 100$ and $T = 500$
+\end{enumerate}
+
+Model 1 and 2 had different $\beta$ values.
+
+\begin{enumerate}
+\item \textbf{Model 1}: $\beta = 0 $ 
+\item \textbf{Model 2}: $\beta = 0.1 $
+\end{enumerate}
+
+
+ For the first model use   = 0 and for the second use   = 0.1. For both of the trained models report the following:
+
 \subsubsection{2.3.1 - Training Loss}
+
+\begin{enumerate}
+\item \textbf{Model 1 ($\beta = 0 $) Training Loss}: 0.3829
+\item \textbf{Model 2 ($\beta = 0.1 $) Training Loss}: 0.3743
+\end{enumerate}
+
 \subsubsection{2.3.2 - Test Loss}
+
+\begin{enumerate}
+\item \textbf{Model 1 ($\beta = 0 $) Test Loss}: 0.3748
+\item \textbf{Model 2 ($\beta = 0.1 $) Test Loss}: 0.3672
+\end{enumerate}
+
 \subsubsection{2.3.3 - Classification Accuracy on the Training Set}
+
+\begin{enumerate}
+\item \textbf{Model 1 ($\beta = 0 $) Classification Accuracy on Training Set}: 0.9139
+\item \textbf{Model 2 ($\beta = 0.1 $) Classification Accuracy on Training Set}: 0.9127
+\end{enumerate}
+
 \subsubsection{2.3.4 - Classification Accruacy on the Test Set}
+
+\begin{enumerate}
+\item \textbf{Model 1 ($\beta = 0 $) Classification Accuracy on Test Set}: 0.9154
+\item \textbf{Model 2 ($\beta = 0.1 $) Classification Accuracy on Test Set}: 0.9125
+\end{enumerate}
+
+
 \subsubsection{2.3.5 - Plot \textbf{$w$} as a 28 $\times $ 28 image }
+
+$\textbf{w}$ for Model 1 ($\beta = 0 $): 
+
+\begin{center}
+\includegraphics[scale=0.5]{2_3_1.png}
+\end{center}
+
+$\textbf{w}$ for Model 2 ($\beta = 0.1 $): 
+
+\begin{center}
+\includegraphics[scale=0.5]{2_3_2.png}
+\end{center}
 
 
 \section{3 - Kernels}
