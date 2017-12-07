@@ -1,17 +1,22 @@
 \BOOKMARK [1][-]{section*.2}{1 - 20 Newsgroup Predictions}{}% 1
-\BOOKMARK [1][-]{section*.3}{2 - Training SVM with SGD}{}% 2
-\BOOKMARK [2][-]{section*.4}{2.1 - SGD with Momentum}{section*.3}% 3
-\BOOKMARK [2][-]{section*.5}{2.2 -Training SVM}{section*.3}% 4
-\BOOKMARK [2][-]{section*.6}{2.3 - Apply 4-vs-9 Digits on MNIST}{section*.3}% 5
-\BOOKMARK [3][-]{section*.7}{2.3.1 - Training Loss}{section*.6}% 6
-\BOOKMARK [3][-]{section*.8}{2.3.2 - Test Loss}{section*.6}% 7
-\BOOKMARK [3][-]{section*.9}{2.3.3 - Classification Accuracy on the Training Set}{section*.6}% 8
-\BOOKMARK [3][-]{section*.10}{2.3.4 - Classification Accruacy on the Test Set}{section*.6}% 9
-\BOOKMARK [3][-]{section*.11}{2.3.5 - Plot w as a 28 \04028 image }{section*.6}% 10
-\BOOKMARK [1][-]{section*.12}{3 - Kernels}{}% 11
-\BOOKMARK [2][-]{section*.13}{3.1 - Positive Semi definite and Quadratic Form}{section*.12}% 12
-\BOOKMARK [2][-]{section*.14}{3.2 - Kernel Properties}{section*.12}% 13
-\BOOKMARK [3][-]{section*.15}{3.2.1 - Prove Property k\(x,y\) = \040is a kernel for > 0}{section*.14}% 14
-\BOOKMARK [3][-]{section*.16}{3.2.2 - Prove Property k\(x,y\) = f\(x\) f\(y\) \040is a kernel for \040f: Rd R}{section*.14}% 15
-\BOOKMARK [3][-]{section*.17}{3.2.3 - Prove Property If k1\(x,y\) and k2\(x,y\) are kernels then k\(x,y\) = a k1\(\(x,y\) + b k2\(\(x,y\) for a,b > 0 is a kernel}{section*.14}% 16
-\BOOKMARK [3][-]{section*.18}{3.2.4 - Prove Property If k1\(x,y\) is a kernel then k\(x,y\) = k1\(x,y\)k1\(x,x\) k1\(y,y\) is a kernel}{section*.14}% 17
+\BOOKMARK [2][-]{section*.3}{3 methods chosen}{section*.2}% 2
+\BOOKMARK [2][-]{section*.4}{Train and Test Accuracies and Losses}{section*.2}% 3
+\BOOKMARK [2][-]{section*.5}{Picking the Best Hyper Parameters}{section*.2}% 4
+\BOOKMARK [2][-]{section*.6}{Explain why you picked these 3 methods}{section*.2}% 5
+\BOOKMARK [2][-]{section*.7}{Best Classifier and Confusion Matrix}{section*.2}% 6
+\BOOKMARK [1][-]{section*.8}{2 - Training SVM with SGD}{}% 7
+\BOOKMARK [2][-]{section*.9}{2.1 - SGD with Momentum}{section*.8}% 8
+\BOOKMARK [2][-]{section*.10}{2.2 -Training SVM}{section*.8}% 9
+\BOOKMARK [2][-]{section*.11}{2.3 - Apply 4-vs-9 Digits on MNIST}{section*.8}% 10
+\BOOKMARK [3][-]{section*.12}{2.3.1 - Training Loss}{section*.11}% 11
+\BOOKMARK [3][-]{section*.13}{2.3.2 - Test Loss}{section*.11}% 12
+\BOOKMARK [3][-]{section*.14}{2.3.3 - Classification Accuracy on the Training Set}{section*.11}% 13
+\BOOKMARK [3][-]{section*.15}{2.3.4 - Classification Accruacy on the Test Set}{section*.11}% 14
+\BOOKMARK [3][-]{section*.16}{2.3.5 - Plot w as a 28 \04028 image }{section*.11}% 15
+\BOOKMARK [1][-]{section*.17}{3 - Kernels}{}% 16
+\BOOKMARK [2][-]{section*.18}{3.1 - Positive Semi definite and Quadratic Form}{section*.17}% 17
+\BOOKMARK [2][-]{section*.19}{3.2 - Kernel Properties}{section*.17}% 18
+\BOOKMARK [3][-]{section*.20}{3.2.1 - Prove Property k\(x,y\) = \040is a kernel for > 0}{section*.19}% 19
+\BOOKMARK [3][-]{section*.21}{3.2.2 - Prove Property k\(x,y\) = f\(x\) f\(y\) \040is a kernel for \040f: Rd R}{section*.19}% 20
+\BOOKMARK [3][-]{section*.22}{3.2.3 - Prove Property If k1\(x,y\) and k2\(x,y\) are kernels then k\(x,y\) = a k1\(\(x,y\) + b k2\(\(x,y\) for a,b > 0 is a kernel}{section*.19}% 21
+\BOOKMARK [3][-]{section*.23}{3.2.4 - Prove Property If k1\(x,y\) is a kernel then k\(x,y\) = k1\(x,y\)k1\(x,x\) k1\(y,y\) is a kernel}{section*.19}% 22

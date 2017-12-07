@@ -166,6 +166,94 @@
 \setcounter{page}{1}
 
 \section{1 - 20 Newsgroup Predictions}
+
+\subsection{3 methods chosen}
+
+\textbf{I chose to use the \textit{tf-idf} feature representation.} I felt that logically it would give me a better result as it uses frequency. \textbf{All subsequent information is based using this feature set}.
+\\ \\
+The 3 models (other than the baseline model) that were chosen are: 
+\begin{enumerate}
+\item SGD
+\item Logistic Regression
+\item Random Forest
+\end{enumerate}
+
+\subsection{Train and Test Accuracies and Losses}
+
+\begin{enumerate}
+\item Baseline Model
+	\begin{enumerate}
+	\item Train accuracy: 59.8727
+	\item Test accuracy: 45.7912
+	\item Train loss: 0.4012
+	\item Test loss: 0.5420
+	\end{enumerate}
+
+\item SGD
+	\begin{enumerate}
+	\item Train accuracy: 95.6248
+	\item Test accuracy: 69.6096
+	\item Train loss: 0.0437
+	\item Test loss: 0.3039
+	\end{enumerate}	
+
+\item Logistic Regression
+\begin{enumerate}
+	\item Train accuracy: 89.5704
+	\item Test accuracy: 67.7509
+	\item Train loss: 0.1042
+	\item Test loss: 0.3224
+\end{enumerate}
+
+\item Random Forest
+\begin{enumerate}
+	\item Train accuracy: 97.2777
+	\item Test accuracy: 41.5825
+	\item Train loss: 0.0272
+	\item Test loss: 0.5841
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Picking the Best Hyper Parameters}
+\begin{enumerate}
+\item \textbf{SGD}: Hinge Loss was used as the loss function with an L2 penalization function. In order to get the best hyper parameters, the optimal regularized constant was determined through trial and error.
+
+\item \textbf{Logistic Regression}: The hyper parameters were selected by a randomized search. The range of parameters were specified with a random state of 1 with no cross validation.
+
+\item \textbf{Random Forest}: The default parameters were used. Increasing the randomness did not increase the training or test accuracy significantly. It was therefore assumed that the default parameters (provided by the library) was satisfiable.
+\end{enumerate}
+
+
+
+\subsection{Explain why you picked these 3 methods}
+\begin{enumerate}
+\item \textbf{SGD}: It has been known to work well with natural language processing problems (e.g. the given data set, where text needs to be classified). It was expected to perform better than the baseline model as there were many parameters that could be tuned to optimize performance. It worked as expected: it had the highest performance among models based on the test set accuracy of 69\%.
+
+\item \textbf{Logistic Regression}: Logistic regression does not over fit for the data and the loss functions give it flexibility for penalization. Hence it seemed a good choice when correlated features are being used. The expectation was that it would work better than the base line model for the same settings (penalization, etc.) It works as expected as it did not assume independence among features given a class (the baseline predictor does).
+
+\item \textbf{Random Forest}: Random forest models are good with complex classification tasks. The classification could involve taking advantage of the meaning behind text (natural language processing). It performed poorer than the baseline model. The Random forest had a high training accuracy which is expected (as it memorizes the data and has a tendency to over fit). However, this did not translate into test cases perhaps because the feature information was not continuous to provide for an obvious trend or perhaps due to the over fit.
+
+\end{enumerate}
+
+\pagebreak
+
+\subsection{Best Classifier and Confusion Matrix}
+
+The best classifier was the \textbf{SGD classifier} with a test accuracy of 69\% and a training accuracy of 95\%.
+\\ \\
+The class with the most confusion (i.e. which had the highest number of false predictions associated with it) was \textbf{talk.religion.misc (feature 19)}.
+\\ \\
+The two classes that the classifier were most confused about were \textbf{talk.politics.guns (feature 16)} and \textbf{talk.politics.misc (feature 18)}.
+\\ \\
+The confusion matrix is plotted below: 
+
+\begin{center}
+\includegraphics[scale=0.75]{1.png}
+\end{center}
+
+
+
+
 \section{2 - Training SVM with SGD}
 \subsection{2.1 - SGD with Momentum}
 

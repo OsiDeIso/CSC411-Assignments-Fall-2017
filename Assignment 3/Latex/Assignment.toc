@@ -1,17 +1,22 @@
 \contentsline {section}{1 - 20 Newsgroup Predictions}{1}{section*.2}
-\contentsline {section}{2 - Training SVM with SGD}{1}{section*.3}
-\contentsline {subsection}{2.1 - SGD with Momentum}{1}{section*.4}
-\contentsline {subsection}{2.2 -Training SVM}{1}{section*.5}
-\contentsline {subsection}{2.3 - Apply 4-vs-9 Digits on MNIST}{1}{section*.6}
-\contentsline {subsubsection}{2.3.1 - Training Loss}{2}{section*.7}
-\contentsline {subsubsection}{2.3.2 - Test Loss}{2}{section*.8}
-\contentsline {subsubsection}{2.3.3 - Classification Accuracy on the Training Set}{2}{section*.9}
-\contentsline {subsubsection}{2.3.4 - Classification Accruacy on the Test Set}{2}{section*.10}
-\contentsline {subsubsection}{2.3.5 - Plot \textbf {$w$} as a 28 $\times $ 28 image }{2}{section*.11}
-\contentsline {section}{3 - Kernels}{3}{section*.12}
-\contentsline {subsection}{3.1 - Positive Semi definite and Quadratic Form}{3}{section*.13}
-\contentsline {subsection}{3.2 - Kernel Properties}{3}{section*.14}
-\contentsline {subsubsection}{3.2.1 - Prove Property $k(\textbf {x},\textbf {y}) = \alpha $ is a kernel for $\alpha > 0$}{3}{section*.15}
-\contentsline {subsubsection}{3.2.2 - Prove Property $k(\textbf {x},\textbf {y}) = f(\textbf {x}) \cdot f(\textbf {y}) $ is a kernel for $ f: \mathbb {R}^{d} \rightarrow \mathbb {R}$}{4}{section*.16}
-\contentsline {subsubsection}{3.2.3 - Prove Property If $k_1(\textbf {x},\textbf {y})$ and $k_2(\textbf {x},\textbf {y})$ are kernels then $k(\textbf {x},\textbf {y}) = a \cdot k_1((\textbf {x},\textbf {y}) + b \cdot k_2((\textbf {x},\textbf {y})$ for $a,b > 0$ is a kernel}{4}{section*.17}
-\contentsline {subsubsection}{3.2.4 - Prove Property If $k_1(\textbf {x},\textbf {y})$ is a kernel then $k(\textbf {x},\textbf {y}) = \frac {k_1(\textbf {x},\textbf {y})}{\sqrt {k_1(\textbf {x},\textbf {x})} \sqrt {k_1(\textbf {y},\textbf {y})}}$ is a kernel}{4}{section*.18}
+\contentsline {subsection}{3 methods chosen}{1}{section*.3}
+\contentsline {subsection}{Train and Test Accuracies and Losses}{1}{section*.4}
+\contentsline {subsection}{Picking the Best Hyper Parameters}{1}{section*.5}
+\contentsline {subsection}{Explain why you picked these 3 methods}{2}{section*.6}
+\contentsline {subsection}{Best Classifier and Confusion Matrix}{3}{section*.7}
+\contentsline {section}{2 - Training SVM with SGD}{3}{section*.8}
+\contentsline {subsection}{2.1 - SGD with Momentum}{3}{section*.9}
+\contentsline {subsection}{2.2 -Training SVM}{4}{section*.10}
+\contentsline {subsection}{2.3 - Apply 4-vs-9 Digits on MNIST}{4}{section*.11}
+\contentsline {subsubsection}{2.3.1 - Training Loss}{4}{section*.12}
+\contentsline {subsubsection}{2.3.2 - Test Loss}{4}{section*.13}
+\contentsline {subsubsection}{2.3.3 - Classification Accuracy on the Training Set}{5}{section*.14}
+\contentsline {subsubsection}{2.3.4 - Classification Accruacy on the Test Set}{5}{section*.15}
+\contentsline {subsubsection}{2.3.5 - Plot \textbf {$w$} as a 28 $\times $ 28 image }{5}{section*.16}
+\contentsline {section}{3 - Kernels}{6}{section*.17}
+\contentsline {subsection}{3.1 - Positive Semi definite and Quadratic Form}{6}{section*.18}
+\contentsline {subsection}{3.2 - Kernel Properties}{6}{section*.19}
+\contentsline {subsubsection}{3.2.1 - Prove Property $k(\textbf {x},\textbf {y}) = \alpha $ is a kernel for $\alpha > 0$}{6}{section*.20}
+\contentsline {subsubsection}{3.2.2 - Prove Property $k(\textbf {x},\textbf {y}) = f(\textbf {x}) \cdot f(\textbf {y}) $ is a kernel for $ f: \mathbb {R}^{d} \rightarrow \mathbb {R}$}{6}{section*.21}
+\contentsline {subsubsection}{3.2.3 - Prove Property If $k_1(\textbf {x},\textbf {y})$ and $k_2(\textbf {x},\textbf {y})$ are kernels then $k(\textbf {x},\textbf {y}) = a \cdot k_1((\textbf {x},\textbf {y}) + b \cdot k_2((\textbf {x},\textbf {y})$ for $a,b > 0$ is a kernel}{7}{section*.22}
+\contentsline {subsubsection}{3.2.4 - Prove Property If $k_1(\textbf {x},\textbf {y})$ is a kernel then $k(\textbf {x},\textbf {y}) = \frac {k_1(\textbf {x},\textbf {y})}{\sqrt {k_1(\textbf {x},\textbf {x})} \sqrt {k_1(\textbf {y},\textbf {y})}}$ is a kernel}{7}{section*.23}

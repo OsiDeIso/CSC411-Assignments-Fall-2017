@@ -238,14 +238,9 @@ def optimize_svm(train_data, train_targets, penalty, optimizer, batchsize, iters
     # Go through every iteration to get a batch
     for i in range(iters):
         x_batch, y_batch = batch_sampler.get_batch()
-        svm.w = optimizer.update_params(svm.w, svm.grad(pad_array(x_batch), y_batch))
+        svm.w = optimizer.update_params(svm.w, svm.grad(np.hstack((np.ones((x_batch.shape[0], 1)), x_batch)), y_batch))
 
     return svm
-
-
-def pad_array(X):
-    return np.hstack((np.ones((X.shape[0], 1)), X))
-
 
 # Taken from Previous Assignment: Calculate accuracy based on labels
 def calculate_accuracy(predicted_labels, actual_labels):
